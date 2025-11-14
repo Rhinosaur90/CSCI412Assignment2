@@ -55,6 +55,13 @@ fun MainScreen() {
         }) {
             Text("Start Activity Implicitly")
         }
+
+        Button(onClick = {
+            val intent = Intent(context, ThirdActivity::class.java)
+            context.startActivity(intent)
+        }) {
+            Text("View Image Activity")
+        }
     }
 }
 

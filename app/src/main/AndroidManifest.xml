@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Camera permission so the app can open the camera for captures -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,6 +16,9 @@
         android:theme="@style/Theme.CSCI412Assignment2">
         <activity
             android:name=".SecondActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ThirdActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
