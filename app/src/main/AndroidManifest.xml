@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Custom dangerous permission for protecting exported components -->
+    <permission
+        android:name="com.example.csci412assignment2.MSE412"
+        android:protectionLevel="dangerous" />
+
     <!-- Camera permission so the app can open the camera for captures -->
     <uses-permission android:name="android.permission.CAMERA" />
 
@@ -16,7 +21,8 @@
         android:theme="@style/Theme.CSCI412Assignment2">
         <activity
             android:name=".SecondActivity"
-            android:exported="false" />
+            android:exported="true"
+            android:permission="com.example.csci412assignment2.MSE412" />
         <activity
             android:name=".ThirdActivity"
             android:exported="false" />
